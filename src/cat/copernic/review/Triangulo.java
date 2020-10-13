@@ -5,6 +5,9 @@
  */
 package cat.copernic.review;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author pep
@@ -37,12 +40,14 @@ public class Triangulo {
     }
     
     /* Calcula el área de este triangulo */
-    public double area() {
+    public double area() throws Exception{
+        if (altura <=0) throw new Exception("La altura no puede ser 0 o negativo");
         return base*altura/2;
     }
     
     /* Calcula el perímetro de este triangulo conocida su base y altura */
-     private double perimetro() {
+     private double perimetro() throws Exception {
+        if (altura <=0) throw new Exception("La altura no puede ser 0 o negativo");
         double hipotenusa;
         hipotenusa = Math.sqrt(((base/2)*(base/2)) + ((altura)*(altura)));
         return hipotenusa*2+base;
@@ -53,8 +58,16 @@ public class Triangulo {
     public static void main(String[] args) {
         Triangulo t1 = new Triangulo(19.0, 17.0);
         System.out.println(t1);
-        System.out.println(t1.area());
-        System.out.println(t1.perimetro());
+        try {
+            System.out.println(t1.area());
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        try {
+            System.out.println(t1.perimetro());
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
     
 
