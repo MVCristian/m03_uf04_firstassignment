@@ -51,10 +51,10 @@ public class Triangulo {
 
        
     public static void main(String[] args) {
-        Triangulo c1 = new Triangulo(19.0, 17.0);
-        System.out.println(c1);
-        System.out.println(c1.area());
-        System.out.println(c1.perimetro());
+        Triangulo t1 = new Triangulo(19.0, 17.0);
+        System.out.println(t1);
+        System.out.println(t1.area());
+        System.out.println(t1.perimetro());
     }
     
 
