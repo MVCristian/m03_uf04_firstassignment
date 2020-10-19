@@ -17,16 +17,15 @@ public abstract class BarcoDeMercancias extends Barco {
         //llama al constructor de la superclase
         super(motor, eslora, manga, nudos, peso);
         this.capacidadContenedores = capacidadContenedores;
-        this.nombre = "Mi yate";
     }
     @Override
     public void arranca(){
-        System.out.println("Arrancando barco de guerra");
+        System.out.println("Arrancando barco de mercancias");
     }
     
     @Override
     public void atraca(){
-        System.out.println("Atracando barco de guerra");
+        System.out.println("Atracando barco de mercancias");
     }
 
     
